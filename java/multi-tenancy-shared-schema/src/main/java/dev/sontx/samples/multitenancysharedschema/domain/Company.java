@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.TenantId;
 
 @Entity
 @Getter
@@ -19,4 +20,7 @@ public class Company {
 
     @Column
     private String address;
+
+    @TenantId
+    private String tenant;
 }
